@@ -19,7 +19,7 @@ const signUpFormSchema = yup.object().shape({
     .min(4, 'Senha deve ter no mínimo 4 caracteres'),
 });
 
-const Register: NextPage = () => {
+const SignUp: NextPage = () => {
   const { signUp } = useAuth();
 
   const {
@@ -114,7 +114,7 @@ const Register: NextPage = () => {
   );
 };
 
-export default Register;
+export default SignUp;
 
 export const getServerSideProps = withSSRRedirect(async (ctx) => {
   return {

@@ -18,7 +18,7 @@ const signInFormSchema = yup.object().shape({
     .min(4, 'Senha deve ter no mínimo 4 caracteres'),
 });
 
-const Home: NextPage = () => {
+const SignIn: NextPage = () => {
   const { signIn } = useAuth();
 
   const {
@@ -94,7 +94,7 @@ const Home: NextPage = () => {
           </Button>
           <Text mt='6' fontSize='sm' fontWeight='normal' textAlign='center'>
             Não possui conta?{' '}
-            <Link href='/registrar' passHref>
+            <Link href='/cadastro' passHref>
               <Button as='a' colorScheme='teal' variant='link'>
                 Cadastrar
               </Button>
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default SignIn;
 
 export const getServerSideProps = withSSRRedirect(async (ctx) => {
   return {
